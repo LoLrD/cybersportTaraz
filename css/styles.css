@@ -1,0 +1,513 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+body {
+    background-image: url('../media/images/background.jpeg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+	padding: 0;
+	margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h2 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto; 
+}
+
+.navbar {
+	display: flex;
+	align-items: center;
+}
+
+.menu {
+	margin: 0 auto;
+	display: flex;
+}
+
+.menu li a {
+    color: #fff;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+.menu li a:hover {
+    transition: all 0.2s;
+    color: #ffc107;
+}
+
+.menu li {
+	padding: 30px 25px;
+}
+
+header {
+    background-color: #212529;
+}
+
+.menu-home-icon {
+    background-image: url(../media/images/navbar-icons/home.svg);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 5px 15px;
+}
+
+.menu-media-icon {
+    background-image: url(../media/images/navbar-icons/media.svg);
+    background-repeat: no-repeat;
+    background-size: 37px;
+    background-position: 3px 19px;
+}
+
+.menu-about-us-icon {
+    background-image: url(../media/images/navbar-icons/about-us.svg);
+    background-repeat: no-repeat;
+    background-size: 37px;
+    background-position: 5px 19px;
+}
+
+.menu-individual-training-icon {
+    background-image: url(../media/images/navbar-icons/individual-training.svg);
+    background-repeat: no-repeat;
+    background-size: 55px;
+    background-position: 0 15px;
+}
+
+.menu-role-training-icon {
+    background-image: url(../media/images/navbar-icons/role-training.svg);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 5px 20px;
+}
+
+.menu-team-training-icon {
+    background-image: url(../media/images/navbar-icons/team-training.svg);
+    background-repeat: no-repeat;
+    background-size: 45px;
+    background-position: 0 15px;
+}
+
+.cybersportStart-section {
+    position: relative;
+    min-height: 100vh;
+}
+
+.page-video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+ 
+.page-video:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+ 
+.page-video .video {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.cybersportStart-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.invite-text {
+    color: #fff;
+	margin: 0 auto; 
+    width: 75%;
+    font-size: 76px;
+    letter-spacing: 5px;
+    padding-top: 100px;
+}
+
+.sign-button {
+    background-color: #8e67ea; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    margin-top: 100px;
+}
+
+.sign-button:hover {
+    background-color: #5700ef;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.sign-button:focus {
+    outline: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 15% auto; 
+    padding: 10px 20px 20px 20px;
+    border: 1px solid #888;
+    width: 35%; 
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type=text], input[type=email], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=submit] {
+    background-color: #8e67ea;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #5700ef;
+}
+
+.video-content {
+    background-color: #212529;
+}
+
+.video-content h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 25px;
+}
+
+.video-banner-container {
+    margin: 0 2% 25px 2%;
+    width: 29%;
+    position: relative;
+    display: inline-block;
+}
+
+.video-banner {
+    width: 100%;
+}
+
+.play-button-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 96px;
+}
+
+.news-content {
+    background-color: #212529;
+}
+
+.news-content h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 32px;
+    background-color: #fe5000;
+    margin-bottom: 25px;
+}
+
+.news-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.news-item {
+    width: 29%;
+    margin: 25px 2%;
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.news-item-banner {
+    width: 100%;
+}
+
+.news-item-header {
+    color: #3d3d3d;
+    font: 20px/22px Proxima Nova,sans-serif;
+    margin-bottom: 8px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+.news-item-description {
+    color: white;
+    cursor: pointer;
+}
+
+footer .container {
+    background-color: #292c36;
+    text-align: center;
+}
+
+.media-icon {
+    margin: 36px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #6b7280;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+.show-flex {
+    display: flex !important;
+}
+
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 1140px;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.container {
+		width: 960px;
+	}
+
+    .menu li {
+        padding: 30px 15px;
+    }
+
+    .menu-about-us-icon {
+        background-position: 0 20px;
+    }
+
+    .menu-role-training-icon {
+        background-position: 5px 22px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+	.container {
+		width: 720px;
+	}
+
+    .play-button-icon {
+        width: 64px;
+    }
+
+    .menu {
+        display: none;
+        margin: 0 0 0 100px;
+        flex-direction: column;
+    }
+
+    .menu li {
+        padding: 20px 15px;
+    }
+
+    .menu li a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .menu-home-icon {
+        background-position: 0 10px;
+    }
+
+    .menu-media-icon {
+        background-position: 3px 15px;
+    }
+
+    .menu-about-us-icon {
+        background-position: 0 15px;
+    }
+
+    .menu-individual-training-icon {
+        background-position: 0 7px;
+    }
+
+    .menu-role-training-icon {
+        background-position: 0 15px;
+    }
+
+    .menu-team-training-icon {
+        background-position: 0 10px;
+    }
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .modal-content {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+	.container {
+		width: 540px;
+	}
+
+    .invite-text {
+        width: 100%;
+        letter-spacing: 0;
+    }
+
+    .media-icon {
+        margin: 24px;
+    }
+
+    .video-banner-container {
+        display: block;
+        width: 75%;
+        margin: 0 auto;
+        padding-bottom: 25px;
+    }
+
+    .play-button-icon {
+        width: 96px;
+    }
+
+    .news-container {
+        flex-direction: column;
+    }
+
+    .news-item {
+        width: 60%;
+        margin: 25px auto;
+    }
+
+    .menu {
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+	.container {
+		width: 100%;
+		padding: 0 15px;
+	}
+
+    .invite-text {
+        font-size: 58px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .menu {
+        margin-left: 35px;
+    }
+
+    .play-button-icon {
+        width: 76px;
+    }
+
+    .media-icon {
+        width: 48px;
+        margin: 18px;
+    }
+
+    .news-item {
+        width: 75%;
+    }
+}
